@@ -41,14 +41,49 @@ section {
 }
 
 .instagram-phone {
-    display: flex;
-    align-items: center; /* vertical */
-    justify-content: center; /* horizontal */
-    width: 50%;
+    background-image: url('./img/instagram-phone.png');
+    background-position: -46px 0;
+    background-size: 468.32px 634.15px;
+    flex-basis: 380.32px;
+    /*impede que ele se repita*/
+    height: 581.15px;
+    margin-bottom: 12px;
+    margin-right: 32px;
 }
 
-.instagram-phone img {
-    height: 50rem;
+.instagram-screenshot {
+    /*altera a posição da foto*/
+    margin: 27px 15px 0 111px;
+    /*coloca as fotos acima de tudo*/
+    position: relative;
+    display: flex;
+    /*coloca as fotos de cima para baixo*/
+    flex-direction: column;
+}
+
+.screenshot{
+    height: 538.84px;
+    opacity: 1;
+    /*faz a imagem ficar acima de tudo*/
+    position: absolute;
+    width: 252px;
+    background-color: black;
+    border-radius: 20px;
+    /*visibility: hidden;*/
+}
+
+.aparece {
+    opacity: 1;
+    transition: opacity 1.5s ease-in;
+    /*Coloca a imagem acima das outras*/
+    z-index: 2;
+    visibility: visible;
+}
+
+.desaparece {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+    visibility: visible;
 }
 
 .instagram-continue {
