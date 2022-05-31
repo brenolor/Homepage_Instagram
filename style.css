@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     text-decoration: none;
     font-family: sans-serif;
     font-size: 14px;
@@ -18,14 +18,26 @@ body {
     justify-content: center;
 }
 
+section {
+    display: flex;
+    /*coloca o footer embaixo de tudo*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .instagram-wrapper {
     display: flex;
+    flex-direction: row;
     /*eixo y, vertical*/
     align-items: center;
-    /*eixo x, horizontal - start - começa a espaçar da esquerda para direita*/
-    justify-content: start;
-    width: 60%;
-    height: 100vh;
+    /*eixo x, horizontal - start(original) - começa a espaçar da esquerda para direita*/
+    justify-content: center;
+    margin: 32px auto 0;
+    max-width: 935px;
+    padding-bottom: 32px;
+    width: 100%;
+    
 }
 
 .instagram-phone {
@@ -45,13 +57,13 @@ body {
     justify-content: space-around; /* vertical */
     /*flex-direction: column - faz os itens ficarem um embaixo do outros, ao invez de em linha*/
     flex-direction: column;
-    width: 50%;
+    max-width: 350;
     min-height: 34rem;
 }
 
 .group {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
@@ -114,7 +126,7 @@ body {
 .download {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem;
 }
@@ -133,17 +145,60 @@ body {
     background-image: url('./img/googleplay-button.png');
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.instagram-footer {
+    display: flex;
+    flex: 0 0 auto;
+    /*comando faz com que os itens fiquem no meio ao quebrar a linha*/
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+
+.item-footer {
+    margin: 1px;
+    padding: 1px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 12px;
+    display: flex;
+}
+
+.link-footer {
+        display: block;
+        color: #8e8e8e;
+        font-weight: 400;
+        font-size: 12px;
+        margin: -2px 0 -3px;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+.select-footer {
+    display: flex;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+select {
+    border: 1px solid transparent;
+    background-color: rgb(243, 243, 243);
+}
+
 /* media queries*/
 
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {
 
     .instagram-wrapper {
         width: 90%;
     }
 
-}
+}*/
 
-@media (max-width: 650px) {
+@media (max-width: 875px) {
 
     body {
         background-color: #ffffff;
@@ -157,12 +212,32 @@ body {
         display: none;
     }
 
-    .instagram-continue {
-        width: 100%;
+    select {
+        background-color: #ffffff;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
     }
 
     .group {
         border: 1px solid transparent;
+    }
+
+    select {
+        background-color: #ffffff;
     }
 
 }
