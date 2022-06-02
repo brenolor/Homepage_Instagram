@@ -18,7 +18,7 @@ setInterval( function() {
     imagens[aux].classList.remove('desaparece');
     imagens[aux].classList.add('aparece');
 
-    /*console.log( 'Executa infinitamente, 2 vez por segundo. i = ' + i);*/
+    /*Executa infinitamente, 1 vez a cada 3 segundo.*/
 }, 3000 );
 
 
@@ -88,7 +88,6 @@ let Traducoes = {
 };
 
 const translate = (lang = null) => {
-    console.log('clicou');
     if (lang === null) {
         //Esta atribuição ocorre na inicialização da página para ter uma texto inicial
         lang = langInicial;
