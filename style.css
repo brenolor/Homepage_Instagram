@@ -214,13 +214,14 @@ footer {
 
 .select-footer {
     display: flex;
-    cursor: pointer;
     box-sizing: border-box;
 }
 
 select {
     border: 1px solid transparent;
     background-color: rgb(243, 243, 243);
+    /*Muda o ponteiro ao passar o mouse por cima do elemento*/
+    cursor: pointer;
 }
 
 /* media queries*/

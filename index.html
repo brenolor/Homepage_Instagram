@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Instagram</title>
+    <title>Instagram Clone</title>
 </head>
 
 <body>
@@ -36,26 +36,26 @@
                         <img src="./img/instagram-perfil.png" alt="foto de perfil">
                     </div>
 
-                    <a href="#" class="instagram-login">Continue como anonimo</a>
-                    <a href="#" class="instagram-logout">Remover conta</a>
+                    <a href="#" class="instagram-login" data-lang-str="Login">Continue como anonimo</a>
+                    <a href="#" class="instagram-logout" data-lang-str="Logout">Remover conta</a>
 
                 </div>
 
                 <div class="group">
 
-                    <p class="not-account">Não é anonimo</p>
+                    <p class="not-account" data-lang-str="Not-account">Não é anonimo?</p>
 
                     <p class="not-account">
-                        <span class="link-blue">Alternar contas</span>
-                        ou
-                        <span class="link-blue">Inscreva-se</span>
+                        <span class="link-blue" data-lang-str="Switch-account">Trocar de conta</span>
+                        <span data-lang-str="Or">ou</span>
+                        <span class="link-blue" data-lang-str="Sign-up">Inscreva-se</span>
                     </p>
 
                 </div>
 
                 <div class="get-the-app">
 
-                    <p class="get-app">Obtenha o aplicativo.</p>
+                    <p class="get-app" data-lang-str="App">Obtenha o aplicativo.</p>
 
                     <div class="download">
                         <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8&vt=lo" class="app-download" target="_blank"></a>
@@ -80,7 +80,7 @@
 
                 <div class="item-footer">
                     <a href="https://about.instagram.com/" target="_blank">
-                        <div class="link-footer">Sobre</div>
+                        <div class="link-footer" data-lang-str="About">Sobre</div>
                     </a>
                 </div>
                 
@@ -91,14 +91,14 @@
                 </div>
 
                 <div class="item-footer">
-                    <a href="/about/jobs/">
-                        <div class="link-footer">Carreiras</div>
+                    <a href="https://about.instagram.com/about-us/careers" target="_blank">
+                        <div class="link-footer" data-lang-str="Jobs">Carreiras</div>
                     </a>
                 </div>
 
                 <div class="item-footer">
                     <a href="https://help.instagram.com/" target="_blank">
-                        <div class="link-footer">Ajuda</div>
+                        <div class="link-footer" data-lang-str="Help">Ajuda</div>
                     </a>
                 </div>
 
@@ -109,44 +109,44 @@
                 </div>
 
                 <div class="item-footer">
-                    <a href="/legal/privacy/" target="_blank">
-                        <div class="link-footer">Privacidade</div>
+                    <a href="https://help.instagram.com/519522125107875/?maybe_redirect_pol=0" target="_blank">
+                        <div class="link-footer" data-lang-str="Privacy">Privacidade</div>
                     </a>
                 </div>
 
                 <div class="item-footer">
-                    <a href="/legal/terms/" target="_blank">
-                        <div class="link-footer">Termos</div>
+                    <a href="https://help.instagram.com/581066165581870" target="_blank">
+                        <div class="link-footer" data-lang-str="Terms">Termos</div>
                     </a>
                 </div>
 
                 <div class="item-footer">
-                    <a href="/directory/profiles/" target="_blank">
-                        <div class="link-footer">Principais contas</div>
+                    <a href="https://www.instagram.com/directory/profiles/" target="_blank">
+                        <div class="link-footer" data-lang-str="Top-accounts">Principais contas</div>
                     </a>
                 </div>
 
                 <div class="item-footer">
-                    <a href="/directory/hashtags/" target="_blank">
+                    <a href="https://www.instagram.com/directory/hashtags/" target="_blank">
                         <div class="link-footer">Hashtags</div>
                     </a>
                 </div>
 
                 <div class="item-footer">
-                    <a href="/explore/locations/" target="_blank">
-                        <div class="link-footer">Localizações</div>
+                    <a href="https://www.instagram.com/explore/locations/" target="_blank">
+                        <div class="link-footer" data-lang-str="Locations">Localizações</div>
                     </a>
                 </div>
 
                 <div class="item-footer">
-                    <a href="/web/lite/" target="_blank">
+                    <a href="https://www.instagram.com/web/lite/" target="_blank">
                         <div class="link-footer">Instagram Lite</div>
                     </a>
                 </div>
                 
                 <div class="item-footer">
                     <a href="https://www.facebook.com/help/instagram/261704639352628" target="_blank">
-                        <div class="link-footer">Carregamento de contatos e não usuários</div>
+                        <div class="link-footer" data-lang-str="Contact-Uploading">Carregamento de contatos e não usuários</div>
                     </a>
                 </div>
 
@@ -156,9 +156,10 @@
 
                 <div class="select-footer">
                     <div class="item-footer">
-                        <select aria-label="Troca idioma de exibição" class="link-footer">
-                            <option value="br">Português (Brasil)</option>
-                            <option value="en">English</option>
+                        <select aria-label="Troca idioma de exibição" class="link-footer" id="idiomas">
+                            <option class="opt" value="en">English</option>
+                            <option class="opt" value="es">Español</option>
+                            <option class="opt" value="pt-br" selected>Português (Brasil)</option>
                         </select>
                     </div>
                 </div>
@@ -172,7 +173,8 @@
         </footer>
     </section>
     
-    <script src="script.js"></script>
+    <!--defer faz o script ser carregado depois da página ser totalmente carregada-->
+    <script src="script.js" defer></script>
 
 </body>
 
