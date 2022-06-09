@@ -2,6 +2,7 @@
 ## Primeiro Projeto do Bootcamp HTML Web Developer da DIO
 
 Projeto de criação da página inicial do Instagram utilizando HTML5, CSS3 e JavaScript.
+
 O projeto pode ser acessado <a href="https://brenolor.github.io/Homepage_Instagram_DIO/">aqui</a>
 
 ## Descrição do Desafio
